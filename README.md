@@ -1,4 +1,3 @@
-# uncertainty-based-adversarial-detection
 ## Master’s Thesis & Scientific Publication
 
 This repository contains the code and experiments accompanying a **master’s thesis and scientific publication** on **adversarial attacks in semantic segmentation**.  
