@@ -26,3 +26,9 @@ The work proposes a **robust detection approach based on uncertainty measures**.
 ### Publication
 - **Detecting Adversarial Attacks in Semantic Segmentation via Uncertainty Estimation: A Deep Analysis**  
   arXiv preprint: https://arxiv.org/abs/2408.10021
+
+## Attribution and Prior Work
+The implementation of adversarial attacks in this repository is inspired by and partially adapted from
+previously published methods, including the work of Jérôme Rony et al.
+(Published 2018–2023, see https://github.com/jeromerony).
+All extensions and experimental pipelines are original to this work.
