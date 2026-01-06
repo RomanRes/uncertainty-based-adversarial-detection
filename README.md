@@ -28,7 +28,13 @@ The work proposes a **robust detection approach based on uncertainty measures**.
   arXiv preprint: https://arxiv.org/abs/2408.10021
 
 ## Attribution and Prior Work
-The implementation of adversarial attacks in this repository is inspired by and partially adapted from
-previously published methods, including the work of Jérôme Rony et al.
-(Published 2018–2023, see https://github.com/jeromerony).
-All extensions and experimental pipelines are original to this work.
+This repository contains original implementations as well as **partial adaptations** of adversarial attack algorithms
+from prior research works.
+In particular, **selected components of certain attack implementations** are adapted from publicly available research code
+by Jérôme Rony and collaborators:
+
+- Jérôme Rony et al., *"Proximal Splitting Adversarial Attacks for Semantic Segmentation"*
+- GitHub repository: https://github.com/jeromerony
+
+All adapted components have been modified and extended for uncertainty-based analysis
+and semantic segmentation experiments. 
