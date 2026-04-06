@@ -98,41 +98,32 @@ Image → Segmentation Model → Uncertainty Map → Detector → Clean / Advers
 
 ## Adversarial Attacks
 
-This work evaluates the proposed detection method on a diverse set of adversarial attacks for semantic segmentation.
+This work evaluates the detection method on a diverse set of adversarial attacks for semantic segmentation.
 
 ### Gradient-Based Attacks
 
-* **FGSM (Fast Gradient Sign Method)**
-  Single-step attack that perturbs the input in the direction of the loss gradient:
-  x_adv = x + ε · sign(∇ₓL)
-
-* **I-FGSM (Iterative FGSM)**
-  Multi-step extension of FGSM with iterative updates and clipping:
-  stronger and more precise perturbations
-
-* **PGD (Projected Gradient Descent)**
-  Generalization of I-FGSM with projection onto a constrained norm ball (e.g., ℓ∞):
-  considered one of the strongest first-order attacks
-
----
+* **FGSM** – single-step gradient-based attack
+* **I-FGSM** – iterative variant with stronger perturbations
+* **PGD** – multi-step attack with projection constraints
 
 ### Segmentation-Specific Attacks
 
-* **DAG (Dense Adversary Generation)**
-  Targeted attack optimizing over all pixels simultaneously to enforce a desired segmentation
-
-* **ALMA / Proximal Splitting Attack**
-  Optimization-based attack minimizing perturbation magnitude while enforcing misclassification
-
----
+* **DAG** – targeted attack optimizing over all pixels
+* **ALMA (Proximal Splitting Attack)** – optimization-based attack with minimal perturbations
 
 ### Universal Attacks
 
-* **SSMM (Stationary Segmentation Mask Method)**
-  Generates a universal perturbation forcing all inputs toward a fixed target segmentation
+* **SSMM** – forces predictions toward a fixed target segmentation
+* **DNNM** – removes specific classes while preserving others
 
-* **DNNM (Dynamic Nearest Neighbor Method)**
-  Removes a specific class while preserving the rest of the segmentation
+### Summary
+
+The evaluation covers:
+
+* weak and strong attacks
+* targeted and untargeted settings
+* image-specific and universal perturbations
+
 
 ---
 
@@ -156,7 +147,9 @@ This work evaluates the proposed detection method on a diverse set of adversaria
 
 ## Extension: Backdoor Attack Detection
 
+- Backdoor attacks were implemented as fine-grained poisoning attacks, modifying pixel-level labels during training
 ### Setup
+
 
 * Considered both:
 
