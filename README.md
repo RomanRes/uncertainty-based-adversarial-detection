@@ -32,7 +32,7 @@ Image → Segmentation Model → Uncertainty Map → Detector → Clean / Advers
 
 ## Example
 
-![Adversarial Detection](img/adversarial_detection.png)
+![Adversarial Detection](img/adversarial_example.png)
 
 Top: clean image  
 Bottom: adversarial example  
