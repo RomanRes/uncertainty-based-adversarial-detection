@@ -107,7 +107,12 @@ The evaluation covers:
 * Lightweight post-processing approach
 * No access to model internals required
 
-[INSERT FIGURE: ROC curve or detection performance plot]
+![Detection Results](img/detection_results.png)
+
+Results shown for DeepLabv3+.
+
+Comparison of different detection methods across multiple adversarial attacks.  
+Top: ADA*, Middle: AuROC, Bottom: TPR@5%.
 
 ---
 
