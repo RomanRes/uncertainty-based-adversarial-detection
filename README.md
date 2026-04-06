@@ -65,7 +65,7 @@ This approach leverages that behavior by:
 ## Method Pipeline
 
 ```text
-Image → Segmentation Model → Softmax → Uncertainty Map → Detector → Clean / Adversarial
+Image → Segmentation Model → Uncertainty Map → Detector → Clean / Adversarial
 ```
 
 ---
@@ -95,6 +95,53 @@ Image → Segmentation Model → Softmax → Uncertainty Map → Detector → Cl
 * Extended analysis to backdoor attacks (training-time poisoning)
 
 ---
+
+## Adversarial Attacks
+
+This work evaluates the proposed detection method on a diverse set of adversarial attacks for semantic segmentation.
+
+### Gradient-Based Attacks
+
+* **FGSM (Fast Gradient Sign Method)**
+  Single-step attack that perturbs the input in the direction of the loss gradient:
+  x_adv = x + ε · sign(∇ₓL)
+
+* **I-FGSM (Iterative FGSM)**
+  Multi-step extension of FGSM with iterative updates and clipping:
+  stronger and more precise perturbations
+
+* **PGD (Projected Gradient Descent)**
+  Generalization of I-FGSM with projection onto a constrained norm ball (e.g., ℓ∞):
+  considered one of the strongest first-order attacks
+
+---
+
+### Segmentation-Specific Attacks
+
+* **DAG (Dense Adversary Generation)**
+  Targeted attack optimizing over all pixels simultaneously to enforce a desired segmentation
+
+* **ALMA / Proximal Splitting Attack**
+  Optimization-based attack minimizing perturbation magnitude while enforcing misclassification
+
+---
+
+### Universal Attacks
+
+* **SSMM (Stationary Segmentation Mask Method)**
+  Generates a universal perturbation forcing all inputs toward a fixed target segmentation
+
+* **DNNM (Dynamic Nearest Neighbor Method)**
+  Removes a specific class while preserving the rest of the segmentation
+
+---
+
+### Observations
+
+* Iterative and optimization-based attacks (I-FGSM, PGD, ALMA, DAG) are generally stronger than single-step attacks
+* Universal attacks enable real-time application but require expensive precomputation
+* Segmentation-specific attacks produce more structured and realistic outputs compared to classification-based attacks
+
 
 ## Results
 
