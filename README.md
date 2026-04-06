@@ -3,10 +3,11 @@
 
 ## Overview
 
-This repository contains the code and experiments accompanying a master’s thesis and scientific publication on adversarial attacks in semantic segmentation.
+his repository contains the code and experiments accompanying a master’s thesis and scientific publication on adversarial attacks in semantic segmentation.
 
 The work proposes a lightweight detection method based on uncertainty estimation that identifies adversarial inputs without modifying the underlying segmentation model.
 
+The corresponding paper is available on arXiv: https://arxiv.org/abs/2408.10021
 ---
 
 ## Key Idea
