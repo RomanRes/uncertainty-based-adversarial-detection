@@ -111,7 +111,7 @@ The evaluation covers:
 
 Results shown for DeepLabv3+.
 
-Comparison of different detection methods across multiple adversarial attacks.  
+Comparison of different detection methods based on uncertainty across multiple adversarial attacks..  
 Top: ADA*, Middle: AuROC, Bottom: TPR@5%.
 
 ---
