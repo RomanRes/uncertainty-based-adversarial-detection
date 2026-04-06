@@ -70,9 +70,16 @@ Image → Segmentation Model → Uncertainty Map → Detector → Clean / Advers
 
 ---
 
+
 ## Example
 
-[INSERT FIGURE: Clean vs Adversarial prediction + entropy heatmap]
+![Adversarial Detection](assets/adversarial_detection.png)
+
+Top: clean image  
+Bottom: adversarial example  
+Left: input  
+Middle: segmentation  
+Right: entropy heatmap  
 
 ---
 
